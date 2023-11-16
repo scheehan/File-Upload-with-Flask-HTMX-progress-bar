@@ -14,7 +14,12 @@
         <div class="upload_form">
             <h1>Internal Temp Files Storage</h1>
 
-            <form id="my-form" method=post enctype="multipart/form-data">
+            <form id="my-form" 
+            hx-encoding="multipart/form-data" 
+            hx-post="/uploads"
+            hx-target="#list_results"      
+            hx-on::after-request="if(event.detail.successful) this.reset()" 
+        >
             <input type=file name=file id="file" multiple/>
             <button>
                 Upload
@@ -23,6 +28,11 @@
             </form>
 
         </div>
+        <script>
+            htmx.on('#my-form', 'htmx:xhr:progress', function(evt) {
+              htmx.find('#my-progress').setAttribute('value', evt.detail.loaded/evt.detail.total * 100)
+            });
+        </script>
 
         <div class="my-desc">
             <p>Supported File Format and Max file size <= 300MB</p>
