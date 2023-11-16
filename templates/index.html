@@ -1,0 +1,60 @@
+{# templates/index.html #}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> {{ title }} </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="/static/js/htmx.min.js"></script>
+
+        <link type="text/css" href={{ url_for('static', filename='css/style.css') }} rel="stylesheet">
+    </head>
+    <body>
+        <div class="upload_form">
+            <h1>Internal Temp Files Storage</h1>
+
+            <form id="my-form" method=post enctype="multipart/form-data">
+            <input type=file name=file id="file" multiple/>
+            <button>
+                Upload
+            </button>
+            <progress id="my-progress" value="0" max="100"></progress>
+            </form>
+
+        </div>
+
+        <div class="my-desc">
+            <p>Supported File Format and Max file size <= 300MB</p>
+            <p>{'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'log', 'tgz', 'zip', 'out', 'py', 'sh', 'mp4', 'mp3', 'iso', 'pcap', 'pcapng', 'ttl', 'xml', 'json', 'tar', 'html', 'xlsx', 'conf', 'har'}</p>
+
+            <p>File will be remove automatically relative to its uploaded date every 4<sup>th</sup> day</p>
+
+        </div> 
+
+        <div class="unsupport_msg">
+            {% block file_content %}
+            {% endblock %}  
+
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        <div class="file_list" >
+            {% block file_list_content %}
+            {%for get_file_filename in get_file_filename%}   
+    
+            <li><a href={{ url_for('download_file', filename=get_file_filename) }}>{{ get_file_filename }}</a></li>
+    
+            {%endfor%}
+
+            <div id="list_results">
+                
+            </div>
+
+            {% endblock %}
+        </div>    
+
+        
+    </body>
+</html>

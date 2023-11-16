@@ -1,0 +1,32 @@
+div.upload_form {
+  position: relative;
+  left: 30px;
+  top: 50px;
+}
+
+div.unsupport_msg {
+  position: relative;
+  left: 30px;
+  top: 75px;
+
+}
+
+div.file_list {
+  position: relative;
+  left: 30px;
+  top: 100px;
+}
+
+div.my-desc {
+  position: relative;
+  display: inline;
+  top: 108px;
+  left: 30px;
+}
+
+#my-progress {
+  position: absolute;
+  display: inline;
+  left: 1px;
+  top: 120px;
+}
