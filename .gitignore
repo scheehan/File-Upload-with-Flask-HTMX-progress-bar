@@ -214,3 +214,5 @@ fabric.properties
 
 # wsgi stuff
 wsgi.py
+
+static/uploads/
