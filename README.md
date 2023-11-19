@@ -4,6 +4,6 @@
 # File Upload web app with Flask and HTMX progress bar
 
 - In this example, file upload with submit button via ajax, along with a progress bar. This implementation with JavaScript using some utility methods in htmx.
-
+--- 
 
 [![Watch the video](https://github.com/scheehan/File-Upload-with-Flask-HTMX-progress-bar/blob/master/images/Track%20Your%20File%20Uploads.png)](https://youtu.be/IpMRus-FLPk)
