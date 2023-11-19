@@ -25,13 +25,12 @@
                 Upload
             </button>
             <progress id="my-progress" value="0" max="100"></progress>
+            </form>
             <script>
                 htmx.on('#my-form', 'htmx:xhr:progress', function(evt) {
                   htmx.find('#my-progress').setAttribute('value', evt.detail.loaded/evt.detail.total * 100)
                 });
             </script>
-            </form>
-
         </div>
 
 
