@@ -51,6 +51,9 @@ JavaScript Code snippet:
   
 ### See File Upload Progress Bar in action:
 [![Watch the video](https://github.com/scheehan/File-Upload-with-Flask-HTMX-progress-bar/blob/master/images/Track%20Your%20File%20Uploads.png)](https://youtu.be/IpMRus-FLPk)
+  
+Here is the Snippet Code view in full:  
+[!image]()
 
 ### Summary:  
 This is a File Upload Web app running with Flask + Python. Implemented with htmx progress bar to improve user experience.
