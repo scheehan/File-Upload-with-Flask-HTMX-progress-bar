@@ -14,11 +14,17 @@ donwload htmx.min.js via [unpkg.com](https://unpkg.com/htmx.org@1.9.8/dist/htmx.
 code snipit:  
 `<script src="/static/js/htmx.min.js"></script>`
 
-- CDN is another way to install htmx library. here is the refer if you interested.
+- CDN is another way to install htmx library. refer to link for more info.  
 https://htmx.org/docs/#via-a-cdn-e-g-unpkg-com
 
 2. Add htmx tag into html form tag as attribute. all htmx comes with hx prefix. 
-- 
+
+`<form id="my-form" 
+            hx-encoding="multipart/form-data" 
+            hx-post="/uploads"
+            hx-target="#list_results"      
+            hx-on::after-request="if(event.detail.successful) this.reset()" 
+        >`
   
 
 
