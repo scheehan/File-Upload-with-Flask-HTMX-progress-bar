@@ -19,7 +19,7 @@ Code snippet:
 - CDN is another way to install htmx library. refer to link for more info.  
 https://htmx.org/docs/#via-a-cdn-e-g-unpkg-com
 
-2. Add htmx tag into html form tag as attribute. all htmx comes with hx prefix.
+2. Add htmx tag into html form tag as attribute. all htmx comes with hx prefix.  
 Code snippet:  
 ~~~
             <form id="my-form"  
@@ -40,7 +40,7 @@ Code snippet:
 ~~~
 
 - We listen for the htmx:xhr:progress event refer back to id my-progress and update the value attribute of the progress bar based on the loaded and total properties in the event detail.  
-
+JavaScript Code snippet:  
 ~~~
             <script>
                 htmx.on('#my-form', 'htmx:xhr:progress', function(evt) {
