@@ -12,7 +12,9 @@
 donwload htmx.min.js via [unpkg.com](https://unpkg.com/htmx.org@1.9.8/dist/htmx.min.js). Htmx is a dependency-free, browser-oriented javascript library. This means that using it is as simple as adding a <script> tag to your document head. No need for complicated build steps or systems.
 
 code snipit:  
-~~~ <script src="/static/js/htmx.min.js"></script> ~~~
+~~~
+<script src="/static/js/htmx.min.js"></script>
+~~~
 
 - CDN is another way to install htmx library. refer to link for more info.  
 https://htmx.org/docs/#via-a-cdn-e-g-unpkg-com
