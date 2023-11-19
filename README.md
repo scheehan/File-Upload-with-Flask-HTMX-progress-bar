@@ -13,7 +13,7 @@ donwload htmx.min.js via [unpkg.com](https://unpkg.com/htmx.org@1.9.8/dist/htmx.
 
 Code snippet:  
 ~~~
-<script src="/static/js/htmx.min.js"></script>
+            <script src="/static/js/htmx.min.js"></script>
 ~~~
 
 - CDN is another way to install htmx library. refer to link for more info.  
@@ -22,15 +22,19 @@ https://htmx.org/docs/#via-a-cdn-e-g-unpkg-com
 2. Add htmx tag into html form tag as attribute. all htmx comes with hx prefix.
 Code snippet:  
 ~~~
-<form id="my-form"  
-            hx-encoding="multipart/form-data"
-            hx-post="/uploads"
-            hx-target="#list_results"
-            hx-on::after-request="if(event.detail.successful) this.reset()"
->
+            <form id="my-form"  
+                        hx-encoding="multipart/form-data"
+                        hx-post="/uploads"
+                        hx-target="#list_results"
+                        hx-on::after-request="if(event.detail.successful) this.reset()"
+            >
 ~~~  
-- 
-
+- We have a form of type multipart/form-data so that the file will be properly encoded with hx-enconding attribute, replacing normal html enctype attibute. 
+- We post the form to /uploads with hx-post, send form data to target URL.
+- we forward the response output to target div id "#list_results" with hx-target attibute.
+- we ensure a form reset only after a successful event with if(event.detail.successful) this.reset()
+- We have a progress element to show the file upload progress with id my-progress.
+- We listen for the htmx:xhr:progress event refer back to id my-progress and update the value attribute of the progress bar based on the loaded and total properties in the event detail.  
 
 ~~~
             <script>
