@@ -11,7 +11,7 @@
 - In order to have htmx support for your website, we need to install htmx library on to your web server, so that allows you to access modern browser features directly from HTML.
 donwload htmx.min.js via [unpkg.com](https://unpkg.com/htmx.org@1.9.8/dist/htmx.min.js). Htmx is a dependency-free, browser-oriented javascript library. This means that using it is as simple as adding a <script> tag to your document head. No need for complicated build steps or systems.
 
-code snipit:  
+Code snippet:  
 ~~~
 <script src="/static/js/htmx.min.js"></script>
 ~~~
@@ -19,7 +19,8 @@ code snipit:
 - CDN is another way to install htmx library. refer to link for more info.  
 https://htmx.org/docs/#via-a-cdn-e-g-unpkg-com
 
-2. Add htmx tag into html form tag as attribute. all htmx comes with hx prefix. 
+2. Add htmx tag into html form tag as attribute. all htmx comes with hx prefix.
+Code snippet:  
 ~~~
 <form id="my-form"  
             hx-encoding="multipart/form-data"
@@ -28,7 +29,15 @@ https://htmx.org/docs/#via-a-cdn-e-g-unpkg-com
             hx-on::after-request="if(event.detail.successful) this.reset()"
 >
 ~~~  
+- 
 
 
+~~~
+            <script>
+                htmx.on('#my-form', 'htmx:xhr:progress', function(evt) {
+                  htmx.find('#my-progress').setAttribute('value', evt.detail.loaded/evt.detail.total * 100)
+                });
+            </script>
+~~~
 
 [![Watch the video](https://github.com/scheehan/File-Upload-with-Flask-HTMX-progress-bar/blob/master/images/Track%20Your%20File%20Uploads.png)](https://youtu.be/IpMRus-FLPk)
