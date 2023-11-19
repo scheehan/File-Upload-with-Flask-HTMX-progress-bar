@@ -11,7 +11,7 @@
 - In order to have htmx support for your website, we need to install htmx library on to your web server, so that allows you to access modern browser features directly from HTML.
 donwload htmx.min.js via [unpkg.com](https://unpkg.com/htmx.org@1.9.8/dist/htmx.min.js). Htmx is a dependency-free, browser-oriented javascript library. This means that using it is as simple as adding a <script> tag to your document head. No need for complicated build steps or systems.
 
-<p>code snipit:<p>
+<p>code snipit:</p>
 `<script src="/static/js/htmx.min.js"></script>`
 
 - CDN is another way to install htmx library. here is the refer if you interested.
