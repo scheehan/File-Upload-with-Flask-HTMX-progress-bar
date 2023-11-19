@@ -8,8 +8,8 @@
 - Here is the steps to implement htmx into a typical file upload web app
 
 1. install htmx library
-- In order to have htmx support for your website, we need to install htmx library on to your web server, so that allows you to access modern browser features directly from HTML
-[unpkg.com](https://unpkg.com/htmx.org@1.9.8/dist/htmx.min.js)
+- In order to have htmx support for your website, we need to install htmx library on to your web server, so that allows you to access modern browser features directly from HTML.
+donwload htmx.min.js via [unpkg.com](https://unpkg.com/htmx.org@1.9.8/dist/htmx.min.js)
 
 `<script src="/static/js/htmx.min.js"></script>`
 
