@@ -59,3 +59,9 @@ Here is the Snippet Code view in full:
 
 ### Summary:  
 This is a File Upload Web app running with Flask + Python. Implemented with htmx progress bar to improve user experience.
+
+### Features
+- Serve static files
+- Upload/Download files
+- Schedule file removal after certain days
+- Support https
