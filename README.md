@@ -5,5 +5,11 @@
 
 - In this example, file upload with submit button via ajax, along with a progress bar. This implementation with JavaScript using some utility methods in htmx.
 --- 
+- Here is the steps to implement htmx into a typical file upload web app
+
+1. install htmx library
+In order to have htmx support for your website, we need to install htmx library on to your web server, so that allows you to access modern browser features directly from HTML![image](https://github.com/scheehan/File-Upload-with-Flask-HTMX-progress-bar/assets/20436753/3c3eac3f-f30d-4d1f-87a5-e0dd0e787cd9)
+
+
 
 [![Watch the video](https://github.com/scheehan/File-Upload-with-Flask-HTMX-progress-bar/blob/master/images/Track%20Your%20File%20Uploads.png)](https://youtu.be/IpMRus-FLPk)
