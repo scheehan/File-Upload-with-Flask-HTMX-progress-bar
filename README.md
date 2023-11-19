@@ -19,11 +19,11 @@ https://htmx.org/docs/#via-a-cdn-e-g-unpkg-com
 
 2. Add htmx tag into html form tag as attribute. all htmx comes with hx prefix. 
 
-`<form id="my-form"<br>
-            hx-encoding="multipart/form-data"<br> 
-            hx-post="/uploads"<br>
-            hx-target="#list_results"<br>      
-            hx-on::after-request="if(event.detail.successful) this.reset()"<br> 
+`<form id="my-form"
+            hx-encoding="multipart/form-data"
+            hx-post="/uploads"
+            hx-target="#list_results"
+            hx-on::after-request="if(event.detail.successful) this.reset()"
         >`
   
 
