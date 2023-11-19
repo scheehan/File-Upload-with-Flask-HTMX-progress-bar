@@ -10,7 +10,7 @@
 1. install htmx library
 - In order to have htmx support for your website, we need to install htmx library on to your web server, so that allows you to access modern browser features directly from HTML
 https://unpkg.com/htmx.org@1.9.8/dist/htmx.min.js
-`<script src="/static/js/htmx.min.js"></script>
+`<script src="/static/js/htmx.min.js"></script>`
 - CDN is another way to install htmx library. here is the refer if you interested.
 https://htmx.org/docs/#via-a-cdn-e-g-unpkg-com
 
