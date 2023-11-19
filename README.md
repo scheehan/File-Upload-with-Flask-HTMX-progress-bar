@@ -34,6 +34,11 @@ Code snippet:
 - we forward the response output to target div id "#list_results" with hx-target attibute.
 - we ensure a form reset only after a successful event with if(event.detail.successful) this.reset()
 - We have a progress element to show the file upload progress with id my-progress.
+
+~~~
+            <progress id="my-progress" value="0" max="100"></progress>
+~~~
+
 - We listen for the htmx:xhr:progress event refer back to id my-progress and update the value attribute of the progress bar based on the loaded and total properties in the event detail.  
 
 ~~~
