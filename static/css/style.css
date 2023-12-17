@@ -30,3 +30,9 @@ div.my-desc {
   left: 1px;
   top: 120px;
 }
+
+#dropbox {
+  border: 5px solid blue;
+  width: 200px;
+  height: 100px;
+}

@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <script src="/static/js/htmx.min.js"></script>
+        <script src="/static/js/dnd.js"></script>
 
         <link type="text/css" href={{ url_for('static', filename='css/style.css') }} rel="stylesheet">
     </head>
@@ -20,10 +21,12 @@
             hx-target="#list_results"      
             hx-on::after-request="if(event.detail.successful) this.reset()" 
         >
+            <div id="dropbox" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
             <input type=file name=file id="file" multiple />
             <button>
                 Upload
             </button>
+            </div>
             <progress id="my-progress" value="0" max="100"></progress>
             </form>
             <script>
